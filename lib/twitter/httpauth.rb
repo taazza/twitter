@@ -21,7 +21,6 @@ module Twitter
       end
 
       self.class.base_uri "http#{'s' if options[:ssl]}://#{options[:api_endpoint]}#{version_path}"
-      self.class.default_timeout options[:timeout] if options[:timeout]
     end
 
     def get(uri, headers={})
